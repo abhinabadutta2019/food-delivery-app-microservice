@@ -4,12 +4,7 @@ const User = require("./models/User");
 // Middleware to verify JWT token and attach user details to request object
 const verifyToken = async (req, res, next) => {
   // Extract token from request cookies
-  //   console.log(req.headers, "dd");
-
-  //   console.log(req.cookies);
-
   const token = req.cookies.token;
-  //   const token = req.headers.token;
   if (!token) {
     return res.status(401).json({ message: "No token provided" });
   }
@@ -21,6 +16,12 @@ const verifyToken = async (req, res, next) => {
     const user = await User.findOne({ userName: decoded.name });
     if (!user) {
       return res.status(404).json({ message: "User not found" });
+    }
+    // Check if the user is not an agent
+    if (user.role === "agent") {
+      return res
+        .status(403)
+        .json({ message: "Access forbidden for agent users" });
     }
     // Attach user details to request object
     req.user = user;

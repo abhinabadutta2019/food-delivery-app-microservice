@@ -56,6 +56,7 @@ router.post("/register", async (req, res) => {
     const newUser = new User({
       userName,
       password,
+      role: "normal",
     });
     newUser.save();
     return res.json(newUser);
