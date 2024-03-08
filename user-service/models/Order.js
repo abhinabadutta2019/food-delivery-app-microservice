@@ -2,6 +2,7 @@ const mongoose = require("mongoose");
 
 const orderSchema = new mongoose.Schema({
   user: { type: mongoose.Schema.Types.ObjectId, ref: "User", required: true }, // Reference to the User model
+  agent: { type: mongoose.Schema.Types.ObjectId, ref: "User" }, // Reference to the User model for the agent
   restaurant: {
     type: mongoose.Schema.Types.ObjectId,
     ref: "Restaurant",
