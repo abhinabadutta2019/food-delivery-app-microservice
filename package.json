@@ -1,0 +1,22 @@
+{
+  "name": "food-delivery-app-microservice",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "install-user-service-server": "cd user-service && npm install",
+    "start-user-service-server": "cd user-service && node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/abhinabadutta2019/food-delivery-app-microservice.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/abhinabadutta2019/food-delivery-app-microservice/issues"
+  },
+  "homepage": "https://github.com/abhinabadutta2019/food-delivery-app-microservice#readme"
+}
