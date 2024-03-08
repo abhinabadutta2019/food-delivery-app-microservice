@@ -5,8 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "install-user-service-server": "cd user-service && npm install",
-    "start-user-service-server": "cd user-service && node index.js"
+    "install-user-service-server": "npm --prefix user-service install user-service",
+    "start-user-service-server": "npm --prefix user-service run start"
   },
   "repository": {
     "type": "git",
