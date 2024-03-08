@@ -6,7 +6,11 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "install-user-service-server": "npm --prefix user-service install user-service",
-    "start-user-service-server": "npm --prefix user-service run start"
+    "start-user-service-server": "npm --prefix user-service run start",
+    "install-restaurant-service-server": "npm --prefix restaurant-service install restaurant-service",
+    "start-restaurant-service-server": "npm --prefix restaurant-service run start",
+    "install-delivery-agent-service-server": "npm --prefix delivery-agent-service install delivery-agent-service",
+    "start-delivery-agent-service-server": "npm --prefix delivery-agent-service run start"
   },
   "repository": {
     "type": "git",
